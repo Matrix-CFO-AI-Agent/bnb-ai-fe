@@ -1,0 +1,136 @@
+/* General styles */
+body {
+  background-color: #f5f7ff;
+}
+
+/* Chat container styles */
+.chat-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Feature card styles */
+.feature-card {
+  width: 100%;
+  height: 100%;
+  border: none !important;
+  background: white !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Chat list styles */
+.chat-list .ant-list-item {
+  margin: 0;
+  padding: 12px;
+  border: none !important;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f7ff;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e0;
+}
+
+/* Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Rainbow Kit Button Override */
+[data-rk] .ju367v11 {
+  border-radius: 12px !important;
+}
+
+/* Antd Override Styles */
+.ant-layout {
+  background: transparent;
+}
+
+.ant-layout-sider {
+  background: transparent;
+}
+
+.ant-btn {
+  border-radius: 12px;
+}
+
+.ant-input {
+  border-radius: 12px;
+}
+
+.ant-list-item {
+  border-radius: 12px;
+}
+
+/* Message styles */
+.message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.message-system {
+  background-color: #2C2D30;
+}
+
+.message-user {
+  background-color: #1A1B1E;
+}
+
+/* Button styles */
+.feature-button {
+  background: #2C2D30;
+  border: 1px solid #3E3F42;
+  transition: all 0.3s ease;
+}
+
+.feature-button:hover {
+  background: #3E3F42;
+  transform: translateY(-2px);
+}
+
+/* List item hover effect */
+.chat-list-item {
+  transition: all 0.2s ease;
+}
+
+.chat-list-item:hover {
+  background: #2C2D30;
+} 
