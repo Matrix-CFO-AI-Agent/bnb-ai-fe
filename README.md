@@ -1,4 +1,4 @@
-# Matrix AI - Web3 Financial Analysis Platform
+# Matrix - Your Crypto CFO Agent
 
 Matrix AI is a comprehensive Web3 financial analysis platform that provides wallet analysis, risk assessment, and tax advice for cryptocurrency users.
 
