@@ -1,0 +1,16 @@
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": {
+        "buildCommand": "CI=false npm run build"
+      }
+    }
+  ],
+  "env": {
+    "NEXT_TYPESCRIPT_IGNOREBUILDERRORS": "1",
+    "NEXT_TELEMETRY_DISABLED": "1",
+    "TYPESCRIPT_IGNORE_DIAGNOSTICS": "2307,2345,6133"
+  }
+} 
