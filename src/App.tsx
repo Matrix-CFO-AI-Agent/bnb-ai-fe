@@ -380,7 +380,26 @@ function App() {
 
       // Simulate AI reply with delay
       setTimeout(() => {
-        // 添加AI回复，但不移除思考消息
+        // 将思考状态更改为已完成
+        setChatGroups(prev =>
+          prev.map(group => ({
+            ...group,
+            chats: group.chats.map(chat =>
+              chat.id === selectedChat
+                ? {
+                  ...chat,
+                  messages: chat.messages.map(msg =>
+                    msg.id === thinkingMessage.id
+                      ? { ...msg, type: 'thought-complete' }
+                      : msg
+                  )
+                }
+                : chat
+            )
+          }))
+        );
+
+        // 添加AI回复
         const aiMessage: ChatMessage = {
           id: Date.now().toString(),
           type: 'system',
@@ -401,7 +420,7 @@ function App() {
         );
 
         setMessageSending(false);
-      }, 2000); // AI回复前思考2秒钟
+      }, 2000);
     }, 800);
   };
 
